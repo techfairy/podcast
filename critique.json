@@ -1,0 +1,12 @@
+{
+  "kind": "critique-panel",
+  "score": 4,
+  "focusedRefinement": "The closing contact card is wider within the shared container, while Telegram and Instagram move beside the booking action as compact lime controls.",
+  "axes": {
+    "clarity": { "score": 5, "notes": "The title, booking action, contact card, and map stay in one shared content width with no accidental horizontal overflow." },
+    "hierarchy": { "score": 5, "notes": "The booking action now carries the social shortcuts, leaving one focused contact card instead of a second competing block." },
+    "typography": { "score": 5, "notes": "The wider contact card retains the intended contact scale while safely wrapping long strings." },
+    "motion": { "score": 4, "notes": "The mobile CTA uses a brief entrance only after the hero is left behind, avoiding an intrusive first-screen overlay." },
+    "brand": { "score": 5, "notes": "Studio Black dominates; white wordmark and restrained lime interaction cues preserve the Live Signal system." }
+  }
+}
