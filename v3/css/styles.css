@@ -3861,7 +3861,13 @@ html,body {
 }
 @media(max-width:620px) {
   .hero-stage {
-    height:clamp(330px,86vw,440px)
+    height:auto;
+    aspect-ratio:16/9
+  }
+  .hero-stage img {
+    object-position:center;
+    transform:none;
+    animation:none
   }
 }
 .formats {
