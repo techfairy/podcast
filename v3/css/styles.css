@@ -2412,6 +2412,27 @@ html,body {
 .contact-card .social-row {
   margin-top:28px
 }
+.contact-partner-cta {
+  display:grid;
+  gap:12px;
+  margin-top:28px
+}
+.contact-partner-cta strong {
+  display:block;
+  color:var(--white);
+  font:600 18px/1.15 var(--display);
+  letter-spacing:-.04em
+}
+.contact-partner-cta p {
+  margin:5px 0 0;
+  color:var(--text-secondary);
+  font-size:14px;
+  line-height:1.45
+}
+.contact-partner-cta .button {
+  width:100%;
+  justify-content:space-between
+}
 .contact-card-rule {
   height:1px;
   margin:28px 0 21px;
@@ -2737,16 +2758,22 @@ html,body {
   }
   .contact-action-row {
     width:100%;
+    align-items:center;
     gap:8px;
     margin-top:38px
   }
   .contact-action-row .button {
-    flex:1 1 0;
+    width:auto;
+    flex:0 1 auto;
     min-width:0;
     padding:0 8px;
     gap:6px;
     font-size:clamp(12px,3.4vw,14px);
     white-space:nowrap
+  }
+  .contact-action-row .contact-action {
+    width:100%;
+    margin-top:0
   }
   @media(max-width:340px) {
     .contact-partner .arrow {
@@ -5168,9 +5195,6 @@ html {
     min-height:44px
   }
 }
-#prices-preview .price-grid {
-  padding-top:0
-}
 #prices-preview .price-card.featured::before {
   content:attr(data-badge);
   justify-content:center;
@@ -5267,7 +5291,8 @@ html {
     margin-top:40px
   }
   #prices .additional-services-list {
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
+    row-gap:20px
   }
 }
 @media(min-width:901px) {
