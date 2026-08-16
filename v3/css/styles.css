@@ -5102,9 +5102,6 @@ html {
   .site-header .menu-toggle {
     display:none!important
   }
-  .hero-cta-row .button,.process>.wrap>.button,.newcomer .button,.contact-action,.contact-partner {
-    display:none!important
-  }
 }
 .site-header {
   position:fixed;
