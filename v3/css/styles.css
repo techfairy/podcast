@@ -3901,6 +3901,32 @@ html,body {
     aspect-ratio:1
   }
 }
+/* iOS Safari рисует нативные поля у button с изображением. Сбрасываем их
+   только в WebKit, не меняя раскладку Android. */
+@supports (-webkit-touch-callout:none) {
+  @media(max-width:620px) {
+    .portfolio .work-lightbox-trigger {
+      display:block;
+      box-sizing:border-box;
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      border:0;
+      border-radius:inherit;
+      -webkit-appearance:none;
+      appearance:none;
+      background:var(--black)
+    }
+    .portfolio .work-lightbox-trigger img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover
+    }
+  }
+}
 .portfolio-actions {
   display:grid;
   gap:18px;
