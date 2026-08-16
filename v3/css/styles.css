@@ -3831,12 +3831,19 @@ html,body {
   aspect-ratio:1
 }
 .work-lightbox-trigger {
+  position:absolute;
+  inset:0;
   display:block;
   width:100%;
   height:100%;
   padding:0;
   border:0;
-  background:transparent;
+  margin:0;
+  overflow:hidden;
+  border-radius:inherit;
+  background:var(--black);
+  -webkit-appearance:none;
+  appearance:none;
   cursor:zoom-in
 }
 .work-lightbox-trigger:focus-visible {
@@ -3844,6 +3851,10 @@ html,body {
   outline-offset:-4px
 }
 .portfolio .work img {
+  display:block;
+  width:100%;
+  height:100%!important;
+  object-fit:cover!important;
   transition:transform .35s ease
 }
 .portfolio .work:hover img {
@@ -3883,6 +3894,16 @@ html,body {
   }
   .portfolio .work:nth-child(2) {
     aspect-ratio:1
+  }
+}
+@supports not (aspect-ratio:1 / 1) {
+  @media(max-width:620px) {
+    .portfolio .work,.portfolio .work:nth-child(1),.portfolio .work:nth-child(2) {
+      height:calc((100vw - 40px) * .75)
+    }
+    .portfolio .work:nth-child(2) {
+      height:calc(100vw - 40px)
+    }
   }
 }
 .portfolio-actions {
