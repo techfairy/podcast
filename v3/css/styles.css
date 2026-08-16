@@ -806,7 +806,8 @@ img {
 }
 /* Вопросы и форма. */
 .faq {
-  padding:150px 0
+  padding:150px 0;
+  overflow-x:clip
 }
 .faq-layout {
   display:grid;
@@ -2735,7 +2736,22 @@ html,body {
     font-size:clamp(40px,10.5vw,52px)
   }
   .contact-action-row {
+    width:100%;
+    gap:8px;
     margin-top:38px
+  }
+  .contact-action-row .button {
+    flex:1 1 0;
+    min-width:0;
+    padding:0 8px;
+    gap:6px;
+    font-size:clamp(12px,3.4vw,14px);
+    white-space:nowrap
+  }
+  @media(max-width:340px) {
+    .contact-partner .arrow {
+      display:none
+    }
   }
   .location-map {
     min-height:470px;
@@ -3831,19 +3847,12 @@ html,body {
   aspect-ratio:1
 }
 .work-lightbox-trigger {
-  position:absolute;
-  inset:0;
   display:block;
   width:100%;
   height:100%;
   padding:0;
   border:0;
-  margin:0;
-  overflow:hidden;
-  border-radius:inherit;
-  background:var(--black);
-  -webkit-appearance:none;
-  appearance:none;
+  background:transparent;
   cursor:zoom-in
 }
 .work-lightbox-trigger:focus-visible {
@@ -3851,10 +3860,6 @@ html,body {
   outline-offset:-4px
 }
 .portfolio .work img {
-  display:block;
-  width:100%;
-  height:100%!important;
-  object-fit:cover!important;
   transition:transform .35s ease
 }
 .portfolio .work:hover img {
@@ -3894,16 +3899,6 @@ html,body {
   }
   .portfolio .work:nth-child(2) {
     aspect-ratio:1
-  }
-}
-@supports not (aspect-ratio:1 / 1) {
-  @media(max-width:620px) {
-    .portfolio .work,.portfolio .work:nth-child(1),.portfolio .work:nth-child(2) {
-      height:calc((100vw - 40px) * .75)
-    }
-    .portfolio .work:nth-child(2) {
-      height:calc(100vw - 40px)
-    }
   }
 }
 .portfolio-actions {
@@ -5544,7 +5539,6 @@ html {
     right:16px
   }
 }
-
 @media(min-width:901px) {
   .process .step {
     grid-template-columns:110px minmax(0,1fr) minmax(0,1.1fr)
