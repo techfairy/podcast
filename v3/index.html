@@ -52,15 +52,13 @@
       ]
     }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20260816-1247">
+  <link rel="stylesheet" href="css/styles.css?v=20260816-1615">
 </head>
 <body>
 <header class="site-header">
 <div class="wrap nav">
-<a href="#top" class="logo" aria-label="ПРУФ — на главную"><img src="assets/icons/proof-logo-white.svg" alt="Логотип ПРУФ"></a>
+<a href="#top" class="logo" aria-label="ПРУФ — на главную"><img src="assets/icons/proof-logo-white-144.webp" alt="Логотип ПРУФ" width="144" height="144"></a>
 <nav class="nav-links" aria-label="Основная навигация">
 <a href="#studio">Студия</a>
 <a href="#formats">Форматы</a>
@@ -98,7 +96,10 @@
 </div>
 </div>
 <figure class="hero-stage">
-<img src="assets/images/studio-hero-sofa-set.webp" alt="Гость в студии SIGNAL PODCAST" width="1920" height="1080" decoding="async" fetchpriority="high">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/images/studio-hero-sofa-set-828.webp" type="image/webp">
+          <img src="assets/images/studio-hero-sofa-set.webp" alt="Гость в студии SIGNAL PODCAST" width="1920" height="1080" decoding="async" fetchpriority="high">
+        </picture>
 <figcaption class="hero-statement"><span>Ваш голос.</span><span>Ваш кадр.</span><span>Ваш пруф.</span></figcaption>
 </figure>
 </div>
@@ -213,7 +214,7 @@
         </div>
         <aside class="studio-story-facts" aria-label="Оснащение и расположение студии">
           <div class="studio-story-facts-logo" aria-hidden="true">
-            <img src="assets/icons/proof-logo-transparent.png" alt="Логотип ПРУФ" width="1254" height="1254" decoding="async">
+            <img src="assets/icons/proof-logo-transparent-256.webp" alt="Логотип ПРУФ" width="256" height="256" decoding="async" loading="lazy">
           </div>
           <ul>
             <li>4 камеры Sony FX30</li>
@@ -949,7 +950,7 @@
   <div class="price-pdf-modal" id="price-pdf-modal" role="dialog" aria-modal="true" aria-labelledby="price-pdf-title">
     <div class="price-pdf-dialog">
       <div class="price-pdf-dialog-head"><h2 id="price-pdf-title">Подробное описание тарифов</h2><a class="price-pdf-close" href="#prices-preview" data-price-pdf-close aria-label="Закрыть PDF">×</a></div>
-      <iframe src="PRUF_price.pdf#view=FitH" title="PDF с подробным описанием тарифов"></iframe>
+      <iframe data-src="PRUF_price.pdf#view=FitH" title="PDF с подробным описанием тарифов"></iframe>
     </div>
   </div>
   <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-labelledby="gallery-lightbox-title" hidden>
@@ -959,14 +960,11 @@
       <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" data-gallery-next aria-label="Следующая фотография">→</button>
       <button class="gallery-lightbox-close" type="button" data-gallery-close aria-label="Закрыть просмотр">×</button>
       <figure>
-        <img id="gallery-lightbox-image" src="assets/images/studio-host-recording.webp" alt="Полноэкранный просмотр фотографии студии">
+        <img id="gallery-lightbox-image" alt="Полноэкранный просмотр фотографии студии">
         <figcaption id="gallery-lightbox-title"></figcaption>
       </figure>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js" crossorigin="anonymous" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20260816-1615" defer></script>
 </body>
 </html>
